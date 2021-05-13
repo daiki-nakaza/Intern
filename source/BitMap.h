@@ -57,7 +57,7 @@ public:
 	size_t size;
 
 	FILE *fp;//書き込み用ファイル
-
+	FILE *dep;//深度チェックファイル
 
 	FileHeader fHeader;
 	InfoHeader iHeader;

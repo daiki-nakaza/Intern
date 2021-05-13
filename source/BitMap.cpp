@@ -57,6 +57,10 @@ int BitMap::ColorChange(int r,int g,int b) {
 	return Gray;
 }
 
+
+
+
+
 /************
 *“Ç‚İ‚İ•”•ª
 ************/
@@ -120,6 +124,8 @@ void BitMap::readFileInfo() {
 	iHeader.dataSize = bit2Integer(data[20], data[21], data[22], data[23]);
 	if (iHeader.clrPerPixel <= 8) {
 		ColorBit = true;
+	}else if (iHeader.clrPerPixel > 8) {
+		ColorBit = false;
 	}
 }
 
